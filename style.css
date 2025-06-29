@@ -59,38 +59,49 @@ body {
   transform: scale(1.05);
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
 .studio-marquee {
   background: #111;
   overflow: hidden;
   height: 40px;
   display: flex;
   align-items: center;
+  color: #ccc;
+  font-weight: 500;
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-right: 100%; /* space for the duplicate */
+  animation: scroll-left 40s linear infinite;
+  position: relative;
+}
+
+/* Visually duplicate the content */
+.marquee-content::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 100%;
   white-space: nowrap;
   color: #ccc;
   font-weight: 500;
   font-size: 1em;
 }
 
-.marquee-track {
-  display: flex;
-  animation: scroll-left 60s linear infinite;
-  width: 200%;               /* ⬅️ Ensures full scrolling width */
+/* Hide scroll bar on overflow */
+.studio-marquee::-webkit-scrollbar {
+  display: none;
 }
 
-.marquee-content {
-  display: flex;
-  justify-content: space-around; /* 💡 auto spacing based on count */
-  min-width: 100%;               /* fill full screen */
-  gap: 40px;                     /* optional, smooths layout */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .section {
