@@ -116,7 +116,7 @@ body {
 }
 
 .audio-player p {
-  margin: 0 0 10px 0; /* Removes top margin, keeps bottom spacing */
+  margin: 4px 0 10px 0; /* TOP | RIGHT | BOTTOM | LEFT */
   font-size: 1.1em;
   margin-bottom: 10px;
   color: #a0d7d2; /* lighter turquoise-ish text */
