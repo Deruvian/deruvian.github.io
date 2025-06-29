@@ -112,19 +112,26 @@ body {
 .audio-player {
   margin: 20px auto;
   max-width: 400px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(30, 165, 158, 0.15); /* subtle turquoise glow */
   padding: 20px;
   border-radius: 12px;
   backdrop-filter: blur(8px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(30, 165, 158, 0.5);
+  border: 1px solid rgba(30, 165, 158, 0.6);
 }
 
 .audio-player p {
   font-size: 1.1em;
   margin-bottom: 10px;
-  color: #ccc;
+  color: #a0d7d2; /* lighter turquoise-ish text */
+  font-weight: 500;
 }
 
 audio {
   width: 100%;
+  background-color: transparent;
+  accent-color: #1ea59e; /* turquoise controls tint */
+  outline: none;
+  filter: drop-shadow(0 0 2px rgba(30, 165, 158, 0.7));
+  border-radius: 6px;
 }
