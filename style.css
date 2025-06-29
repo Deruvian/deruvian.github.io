@@ -99,6 +99,10 @@ body {
   margin-bottom: 10px;
 }
 
+#demos p {
+  margin-bottom: 30px; /* Adjust as needed */
+}
+
 .audio-player {
   margin: 20px auto 40px auto;
   max-width: 400px;
@@ -111,6 +115,7 @@ body {
 }
 
 .audio-player p {
+  margin: 0 0 10px 0; /* Removes top margin, keeps bottom spacing */
   font-size: 1.1em;
   margin-bottom: 10px;
   color: #a0d7d2; /* lighter turquoise-ish text */
