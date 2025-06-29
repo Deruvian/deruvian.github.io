@@ -59,39 +59,37 @@ body {
   transform: scale(1.05);
 }
 
-@keyframes scroll-marquee {
+@keyframes scroll-loop-right {
   0% {
-    transform: translateX(100%);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
 }
 
 .studio-marquee {
   background: #111;
   overflow: hidden;
-  padding: 10px 0;
-  border-bottom: none; /* REMOVE any unnecessary bottom border */
-  position: relative;
-  height: 40px; /* FORCE consistent height */
+  height: 40px;
   display: flex;
-  align-items: center; /* center vertically */
+  align-items: center;
 }
 
 .marquee-content {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll-marquee 40s linear infinite;
-  color: #808080; /* or your chosen grey */
-  font-weight: 500;
-  font-size: 1em;
-  line-height: 1; /* fix vertical alignment */
+  display: flex;
+  animation: scroll-loop-right 40s linear infinite;
+  will-change: transform;
 }
 
-.marquee-content span {
-  display: inline-block;
-  margin-right: 60px;
+.marquee-group {
+  display: flex;
+  gap: 60px;
+  white-space: nowrap;
+  color: #ccc;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1;
 }
 
 .section {
