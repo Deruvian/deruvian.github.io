@@ -62,41 +62,46 @@ body {
 .marquee-container {
   position: relative;
   width: 100%;
+  height: 40px;
   overflow: hidden;
   background: #111;
-  height: 40px;
   display: flex;
   align-items: center;
-  color: #ccc;
-  font-weight: 500;
-  font-size: 1em;
   white-space: nowrap;
 }
 
 .marquee, .marquee2 {
   position: absolute;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
   top: 0;
   left: 0;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding-left: 100%; /* Start off-screen to the right */
+  animation: marquee 20s linear infinite;
 }
 
-.marquee span, .marquee2 span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: marquee 10s linear infinite;
-  /* Use letter spacing or &nbsp; between names for spacing */
+.marquee2 {
+  animation-delay: 10s; /* Half of animation duration */
 }
 
-.marquee2 span {
-  animation-delay: 5s; /* half the duration for stagger */
+/* Style individual names for even spacing */
+.marquee span {
+  margin-right: 80px; /* Adjust spacing here */
+  color: #ccc;
+  font-weight: 500;
+  font-size: 1em;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
-/* Keyframes: move text fully from right to left */
+/* Last span no margin-right to avoid extra gap */
+.marquee span:last-child {
+  margin-right: 0;
+}
+
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
