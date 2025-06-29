@@ -7,9 +7,11 @@ body {
 }
 
 .profile-img {
-  width: 15px;
-  height: 15px;
+  width: 40vw;               /* 40% of the viewport width */
+  max-width: 150px;          /* but never larger than 150px */
+  height: auto;              /* maintain aspect ratio */
   border-radius: 50%;
+  object-fit: cover;
   display: block;
   margin: 0 auto 1rem auto;
 }
