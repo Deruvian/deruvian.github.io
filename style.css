@@ -134,3 +134,14 @@ audio {
   filter: drop-shadow(0 0 2px rgba(30, 165, 158, 0.7));
   border-radius: 6px;
 }
+
+a.discord-link {
+  color: #1ea59e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a.discord-link:hover {
+  text-decoration: underline;
+}
+
