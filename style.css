@@ -59,25 +59,37 @@ body {
   transform: scale(1.05);
 }
 
-.navbar {
-  background: #111;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
+.studio-marquee {
+  background: #111;                /* same as navbar */
+  padding: 10px 0;                 /* match navbar padding */
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
   font-weight: 500;
-  padding: 10px;
+  font-size: 1em;
+  color: #1ea59e;                  /* your turquoise brand color */
+  border-bottom: 1px solid rgba(30, 165, 158, 0.2); /* subtle bottom line */
 }
 
-.navbar a:hover {
-  text-decoration: underline;
+.marquee-track {
+  display: inline-block;
+  animation: scroll-marquee 25s linear infinite;
 }
 
+.marquee-track span {
+  display: inline-block;
+  margin-right: 60px;             /* space between names */
+}
+
+/* Infinite horizontal scroll */
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .section {
   padding: 60px 20px;
 }
