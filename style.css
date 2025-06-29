@@ -111,7 +111,7 @@ body {
 }
 
 .section h2 {
-  color: #9f88ff;
+  color: #a0d7d2; /* soft, readable turquoise tone */
   font-size: 2.5em;
   margin-bottom: 10px;
 }
