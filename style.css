@@ -1,33 +1,25 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
-  background: linear-gradient(135deg, #0f7a78, #1ea59e, #a8e0f0);
-  color: #f2f2f2;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #e0e0e0;
   text-align: center;
 }
 
 .hero {
-  padding: 60px 20px 40px;
-}
-
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 80px 20px;
 }
 
 .hero h1 {
   font-size: 4em;
-  color: #ffffff;
+  color: #d19fff;
   margin: 0;
 }
 
 .hero p {
   font-size: 1.2em;
   margin: 20px 0;
-  color: #e0f7f6;
+  color: #ccc;
 }
 
 .cta-button {
@@ -37,7 +29,7 @@ body {
   font-size: 1em;
   font-weight: bold;
   border-radius: 10px;
-  background: linear-gradient(to right, #1ea59e, #74ebd5);
+  background: linear-gradient(to right, #74ebd5, #9face6);
   color: white;
   text-decoration: none;
   transition: transform 0.2s ease;
@@ -47,12 +39,31 @@ body {
   transform: scale(1.05);
 }
 
+.navbar {
+  background: #111;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
 .section {
   padding: 60px 20px;
 }
 
 .section h2 {
-  color: #ffffff;
+  color: #9f88ff;
   font-size: 2.5em;
   margin-bottom: 10px;
 }
@@ -70,7 +81,7 @@ body {
 .audio-player p {
   font-size: 1.1em;
   margin-bottom: 10px;
-  color: #e0f7f6;
+  color: #ccc;
 }
 
 audio {
