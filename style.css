@@ -49,14 +49,18 @@ body {
   font-size: 1em;
   font-weight: bold;
   border-radius: 10px;
-  background: linear-gradient(to right, #74ebd5, #9face6);
+  background: linear-gradient(135deg, #1ea59e, #0e605c);
   color: white;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(30, 165, 158, 0.4);
+  border: 1px solid rgba(30, 165, 158, 0.5);
 }
 
 .cta-button:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(30, 165, 158, 0.7);
+  background: linear-gradient(135deg, #24cfc6, #1ea59e);
 }
 
 .studio-marquee {
