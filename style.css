@@ -59,12 +59,12 @@ body {
   transform: scale(1.05);
 }
 
-@keyframes scroll-loop-right {
+@keyframes scroll-left {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
 }
 
@@ -74,22 +74,22 @@ body {
   height: 40px;
   display: flex;
   align-items: center;
-}
-
-.marquee-content {
-  display: flex;
-  animation: scroll-loop-right 40s linear infinite;
-  will-change: transform;
-}
-
-.marquee-group {
-  display: flex;
-  gap: 60px;
   white-space: nowrap;
   color: #ccc;
   font-weight: 500;
   font-size: 1em;
-  line-height: 1;
+}
+
+.marquee-track {
+  display: flex;
+  animation: scroll-left 60s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  justify-content: space-around; /* 💡 auto spacing based on count */
+  min-width: 100%;               /* fill full screen */
+  gap: 40px;                     /* optional, smooths layout */
 }
 
 .section {
