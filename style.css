@@ -72,15 +72,18 @@ body {
 
 .marquee-track {
   display: flex;
-  width: max-content;       /* width equals content width */
+  width: 200vw; /* 200% of viewport width */
   animation: scroll-left 60s linear infinite;
 }
 
 .marquee-content {
+  flex-shrink: 0;
+  width: 50vw;  /* half viewport width */
   display: flex;
-  flex-shrink: 0;           /* prevent shrinking */
-  gap: 60px;                /* even spacing */
-  padding-right: 60px;      /* padding to smooth loop */
+  gap: 60px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .marquee-content span {
