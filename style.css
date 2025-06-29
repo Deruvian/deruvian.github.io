@@ -101,7 +101,7 @@ body {
 }
 
 .audio-player {
-  margin: 20px auto;
+  margin: 20px auto 40px auto;
   max-width: 400px;
   background: rgba(30, 165, 158, 0.15); /* subtle turquoise glow */
   padding: 20px;
