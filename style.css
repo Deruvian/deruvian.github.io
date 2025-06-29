@@ -82,8 +82,8 @@ body {
 .marquee-content {
   display: inline-block;
   white-space: nowrap;
-  animation: scroll-marquee 20s linear infinite;
-  color: #ccc; /* or your chosen grey */
+  animation: scroll-marquee 40s linear infinite;
+  color: #808080; /* or your chosen grey */
   font-weight: 500;
   font-size: 1em;
   line-height: 1; /* fix vertical alignment */
