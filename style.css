@@ -78,7 +78,7 @@ body {
 
 .studio-marquee {
   background: #111;
-  overflow: hidden;          /* hides overflow */
+  overflow: hidden;
   height: 40px;
   display: flex;
   align-items: center;
@@ -90,14 +90,15 @@ body {
 
 .marquee-track {
   display: flex;
-  width: max-content;        /* width equals combined content */
-  animation: scroll-left 40s linear infinite;
+  gap: 60px; /* Ensures spacing between the two content blocks */
+  animation: scroll-left 20s linear infinite;
+  width: fit-content;
 }
 
 .marquee-content {
   display: flex;
-  flex-shrink: 0;
   gap: 60px;
+  flex-shrink: 0;
   padding-right: 60px;
 }
 
@@ -106,7 +107,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-50%));
+    transform: translateX(-50%);
   }
 }
 
