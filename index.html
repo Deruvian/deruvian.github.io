@@ -63,18 +63,5 @@
     <p>Email me at <a href="mailto:your@email.com">your@email.com</a></p>
   </section>
 
-<script>
-  const marquee = document.querySelector('.marquee-content');
-  let text = marquee.textContent;
-  let speed = 200; // milliseconds per character shift
-
-  function scrollText() {
-    text = text.slice(1) + text[0];
-    marquee.textContent = text;
-  }
-
-  setInterval(scrollText, speed);
-</script>
-
 </body>
 </html>
