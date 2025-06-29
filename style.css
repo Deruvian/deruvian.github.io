@@ -24,7 +24,8 @@ body {
 
 .hero h1 {
   font-size: 4em;
-  color: #d19fff;
+  color: #1ea59e;
+  text-shadow: 0 0 12px rgba(30, 165, 158, 0.4);
   margin: 0;
 }
 
