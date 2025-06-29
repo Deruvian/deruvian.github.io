@@ -59,36 +59,39 @@ body {
   transform: scale(1.05);
 }
 
-.studio-marquee {
-  background: #111;
-  padding: 10px 0;
-  overflow: hidden;
-  position: relative;
-  border-bottom: 1px solid rgba(30, 165, 158, 0.2);
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-.marquee-track {
+.studio-marquee {
+  background: #111;
+  overflow: hidden;
+  padding: 10px 0;
+  border-bottom: none; /* REMOVE any unnecessary bottom border */
+  position: relative;
+  height: 40px; /* FORCE consistent height */
   display: flex;
-  width: 200%; /* ensures content is wider than viewport */
-  animation: scroll-marquee 20s linear infinite;
+  align-items: center; /* center vertically */
 }
 
 .marquee-content {
-  display: flex;
-  gap: 60px;
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-marquee 20s linear infinite;
+  color: #ccc; /* or your chosen grey */
   font-weight: 500;
   font-size: 1em;
-  color: #1ea59e;
-  white-space: nowrap;
+  line-height: 1; /* fix vertical alignment */
 }
 
-@keyframes scroll-marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.marquee-content span {
+  display: inline-block;
+  margin-right: 60px;
 }
 
 .section {
