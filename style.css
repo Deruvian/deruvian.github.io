@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(to right, #1ea59e, #68d5d1);
   color: #e0e0e0;
   text-align: center;
 }
@@ -12,7 +12,7 @@ body {
 
 .hero h1 {
   font-size: 4em;
-  color: #d19fff;
+  color: #1ea59e
   margin: 0;
 }
 
