@@ -72,16 +72,16 @@ body {
 
 .marquee-track {
   display: flex;
-  width: 200vw; /* 200% of viewport width */
+  width: 200vw; /* Twice viewport width */
   animation: scroll-left 60s linear infinite;
 }
 
 .marquee-content {
   flex-shrink: 0;
-  width: 50vw;  /* half viewport width */
+  width: 50vw;  /* Half viewport width */
   display: flex;
-  gap: 60px;
-  padding-right: 60px;
+  justify-content: space-between; /* Evenly space names across full width */
+  padding: 0 20px;                 /* Optional side padding */
   box-sizing: border-box;
   white-space: nowrap;
 }
