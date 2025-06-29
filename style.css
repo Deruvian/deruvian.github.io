@@ -68,42 +68,34 @@ body {
   color: #ccc;
   font-weight: 500;
   font-size: 1em;
-  white-space: nowrap;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;       /* width equals content width */
+  animation: scroll-left 60s linear infinite;
 }
 
 .marquee-content {
-  display: inline-block;
-  padding-right: 100%; /* space for the duplicate */
-  animation: scroll-left 40s linear infinite;
-  position: relative;
+  display: flex;
+  flex-shrink: 0;           /* prevent shrinking */
+  gap: 60px;                /* even spacing */
+  padding-right: 60px;      /* padding to smooth loop */
 }
 
-/* Visually duplicate the content */
-.marquee-content::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 100%;
-  white-space: nowrap;
-  color: #ccc;
-  font-weight: 500;
-  font-size: 1em;
+.marquee-content span {
+  white-space: nowrap;      /* prevent text wrapping */
 }
 
-/* Hide scroll bar on overflow */
-.studio-marquee::-webkit-scrollbar {
-  display: none;
-}
-
+/* Keyframes: scroll from 0% to 50% to reveal duplicated content */
 @keyframes scroll-left {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
-
 .section {
   padding: 60px 20px;
 }
