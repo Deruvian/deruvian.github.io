@@ -1,3 +1,16 @@
+.construction-bar {
+  background: #1ea59e;
+  color: #111;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 0.95em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
