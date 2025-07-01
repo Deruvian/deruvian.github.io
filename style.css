@@ -1,24 +1,24 @@
-:root {
-  --deruvian-gradient: linear-gradient(135deg, #0e605c, #1ea59e);
-}
-
-.social-button {
+.icon-button {
   width: 48px;
   height: 48px;
-  background: var(--deruvian-gradient);
+  background: linear-gradient(135deg, #1ea59e, #0e605c);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
-  border: none;
+  border-radius: 10px;
+  border: 1px solid rgba(30, 165, 158, 0.5);
+  box-shadow: 0 0 10px rgba(30, 165, 158, 0.4);
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
-.social-button:hover {
-  transform: scale(1.1);
+.icon-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #24cfc6, #1ea59e);
+  box-shadow: 0 0 18px rgba(30, 165, 158, 0.7);
 }
 
 .construction-bar {
