@@ -1,3 +1,29 @@
+.fadeout-horizontal {
+  --fade-size: 5rem;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black var(--fade-size),
+    black calc(100% - var(--fade-size)),
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black var(--fade-size),
+    black calc(100% - var(--fade-size)),
+    transparent
+  );
+
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+
 .construction-bar {
   background: #1ea59e;
   color: #111;
