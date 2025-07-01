@@ -1,3 +1,26 @@
+:root {
+  --deruvian-gradient: linear-gradient(135deg, #0e605c, #1ea59e);
+}
+
+.social-button {
+  width: 48px;
+  height: 48px;
+  background: var(--deruvian-gradient);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
 .construction-bar {
   background: #1ea59e;
   color: #111;
