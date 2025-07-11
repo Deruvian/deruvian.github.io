@@ -136,29 +136,31 @@ body {
   }
 }
 
-/* === Media Section (Equal Edge and Inner Gaps) === */
 .media-section {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: start;
-  gap: 0; /* gap is built into the grid template */
-  max-width: 100%;
-  width: 100%;
-  padding: 2rem 0; /* top & bottom spacing only */
+  padding: 2rem;            /* sets outer gaps */
+  gap: 2rem;                /* sets the inner gap (between audio and video) */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Column assignments */
+/* Featured Tracks styling */
 .featured-tracks {
-  grid-column: 2;
-  max-width: 100%;
+  grid-column: 1;
+  max-width: 400px;
+  width: 100%;
 }
 
+/* Showreels styling */
 .showreels {
-  grid-column: 4;
-  max-width: 100%;
+  grid-column: 3;
+  max-width: 640px;
+  width: 100%;
 }
 
-/* Responsive stacking for mobile */
+/* Stack on mobile */
 @media (max-width: 767px) {
   .media-section {
     display: flex;
@@ -170,6 +172,7 @@ body {
   .featured-tracks,
   .showreels {
     width: 100%;
+    max-width: 100%;
   }
 }
 
