@@ -136,38 +136,42 @@ body {
   }
 }
 
-/* Container for both sections */
 .media-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem;
+  padding: 2rem 1rem; /* default smaller padding on mobile */
 }
 
-/* Inner sections */
-.showreels, .featured-tracks {
+.featured-tracks,
+.showreels {
   flex: 1;
 }
 
-/* Make videos responsive */
 .video-container video {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
 }
 
-/* Side-by-side on desktop */
+/* Desktop layout: row with showreels on the right, larger side margins */
 @media (min-width: 768px) {
   .media-section {
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 4rem; /* increased side margin */
   }
 
-  .showreels, .featured-tracks {
-    flex: 1;
-    max-width: 50%;
+  .featured-tracks {
+    order: 1;
+    margin-right: 2rem;
+  }
+
+  .showreels {
+    order: 2;
+    margin-left: 2rem;
   }
 }
 
