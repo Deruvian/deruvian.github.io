@@ -136,6 +136,41 @@ body {
   }
 }
 
+/* Container for both sections */
+.media-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Inner sections */
+.showreels, .featured-tracks {
+  flex: 1;
+}
+
+/* Make videos responsive */
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+/* Side-by-side on desktop */
+@media (min-width: 768px) {
+  .media-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .showreels, .featured-tracks {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
 .section h2 {
   color: #a0d7d2; /* soft, readable turquoise tone */
   font-size: 2.5em;
