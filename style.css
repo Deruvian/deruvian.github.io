@@ -138,30 +138,31 @@ body {
 
 .media-section {
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) 2rem minmax(300px, 1fr);
-  /* 1st column min 300px up to equal fraction, 
-     middle gap fixed 2rem, 
-     3rd column same as 1st */
+  grid-template-columns:
+    2rem              /* left gap */
+    minmax(300px, 2fr) /* featured tracks */
+    2rem              /* middle gap */
+    minmax(300px, 1fr) /* showreels */
+    2rem;             /* right gap */
   align-items: start;
-  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 2rem; /* fallback if needed */
+  padding: 2rem 0;
+  width: 100%;
 }
 
+/* Grid placement */
 .featured-tracks {
-  grid-column: 1;
+  grid-column: 2;
   width: 100%;
-  max-width: none; /* remove max-width */
 }
 
 .showreels {
-  grid-column: 3;
+  grid-column: 4;
   width: 100%;
-  max-width: none;
 }
 
-/* Stack on mobile */
+/* Mobile stacking */
 @media (max-width: 767px) {
   .media-section {
     display: flex;
@@ -169,7 +170,6 @@ body {
     padding: 2rem 1rem;
     gap: 2rem;
   }
-
   .featured-tracks,
   .showreels {
     width: 100%;
