@@ -136,54 +136,50 @@ body {
   }
 }
 
+/* === Media Section (Equal Edge and Inner Gaps) === */
 .media-section {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1rem; /* Mobile-friendly spacing */
-  max-width: 1200px;  /* Centered layout on larger screens */
-  margin: 0 auto;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: start;
+  gap: 0; /* gap is built into the grid template */
+  max-width: 100%;
+  width: 100%;
+  padding: 2rem 0; /* top & bottom spacing only */
 }
 
-.featured-tracks,
-.showreels {
-  flex: 1;
-}
-
-/* Optional: widen showreels slightly while keeping outer margins symmetrical */
+/* Column assignments */
 .featured-tracks {
-  flex: 1.2;
+  grid-column: 2;
+  max-width: 100%;
 }
 
 .showreels {
-  flex: 1.8;
+  grid-column: 4;
+  max-width: 100%;
 }
 
-/* Make videos look clean */
+/* Responsive stacking for mobile */
+@media (max-width: 767px) {
+  .media-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .featured-tracks,
+  .showreels {
+    width: 100%;
+  }
+}
+
+/* Video styling */
 .video-container video {
   width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
-}
-
-/* Desktop layout */
-@media (min-width: 768px) {
-  .media-section {
-    flex-direction: row;
-    padding: 2rem; /* Equal left/right margin inside container */
-  }
-
-  .featured-tracks {
-    order: 1;
-    margin-right: 2rem;
-  }
-
-  .showreels {
-    order: 2;
-    margin-left: 2rem;
-  }
 }
 
 .section h2 {
