@@ -149,7 +149,7 @@ body {
 /* Featured Tracks styling */
 .featured-tracks {
   grid-column: 1;
-  max-width: 400px;
+  max-width: 800px;
   width: 100%;
 }
 
