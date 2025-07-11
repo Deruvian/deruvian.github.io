@@ -160,8 +160,9 @@ body {
 @media (min-width: 768px) {
   .media-section {
     flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem 4rem; /* increased side margin */
+    justify-content: flex-start;
+    padding-left: 2rem;   /* tighter left padding */
+    padding-right: 6rem;  /* more spacious right padding */
   }
 
   .featured-tracks {
@@ -171,7 +172,7 @@ body {
 
   .showreels {
     order: 2;
-    margin-left: 2rem;
+    margin-left: 0;
   }
 }
 
