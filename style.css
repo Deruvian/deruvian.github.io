@@ -67,6 +67,17 @@ body {
   100% { transform: translateY(0px); }
 }
 
+.sfx-project {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.sfx-title {
+  font-size: 1.5rem;
+  color: #bdbeea; /* or your desired color */
+  margin-bottom: 1rem;
+}
+
 .hero h1 {
   font-size: 4em;
   color: #1ea59e;
